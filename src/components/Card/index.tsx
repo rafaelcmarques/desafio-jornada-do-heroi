@@ -20,7 +20,7 @@ export function Card({ superhero, onSelect, isSelected }: CardProps) {
     inline-block pb-4 bg-gradient-to-tr from-zinc-800 to-zinc-700 text-white overflow-hidden rounded-2xl shadow
     hover:shadow-md
     transition
-    ${isSelected ? 'border-4 border-blue-400' : ''} // Adicione esta linha
+    ${isSelected ? 'border-4 border-violet-500' : ''} // Adicione esta linha
   `}
       onClick={handleSelection}
     >

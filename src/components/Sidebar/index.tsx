@@ -1,8 +1,8 @@
 import React from 'react'
 import { Logo } from './Logo'
-import { Search, Home } from 'lucide-react'
-import { NavItem } from './MainNavigation/NavItem'
+import { Search } from 'lucide-react'
 import { useSearch } from '@/src/hooks/Search'
+import { Information } from './InformationWidget'
 
 export function Sidebar() {
   const { setSearchValue } = useSearch()
@@ -25,7 +25,7 @@ export function Sidebar() {
       </div>
 
       <nav className="space-y-2">
-        <NavItem title="Home" icon={Home} />
+        <Information />
       </nav>
     </aside>
   )

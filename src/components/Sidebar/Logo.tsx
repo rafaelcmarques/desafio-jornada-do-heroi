@@ -4,206 +4,53 @@ export function Logo() {
   return (
     <strong className=" mx-1 flex items-center gap-2 text-xl font-semibold text-zinc-900">
       <svg
-        width={38}
-        height={38}
-        viewBox="0 0 38 38"
-        fill="none"
+        version="1.0"
         xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 512.000000 512.000000"
+        preserveAspectRatio="xMidYMid meet"
       >
-        <g filter="url(#filter0_dd_6271_307)">
-          <g clipPath="url(#clip0_6271_307)">
-            <rect x={3} y={2} width={32} height={32} rx={8} fill="#fff" />
-            <rect
-              x={3}
-              y={2}
-              width={32}
-              height={32}
-              rx={8}
-              fill="url(#paint0_linear_6271_307)"
-            />
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M19 4.039c-7.71 0-13.961 6.25-13.961 13.961 0 7.71 6.25 13.961 13.961 13.961 7.71 0 13.961-6.25 13.961-13.961 0-7.71-6.25-13.961-13.961-13.961zM4.961 18c0-7.753 6.286-14.039 14.039-14.039S33.039 10.247 33.039 18 26.753 32.039 19 32.039 4.961 25.753 4.961 18z"
-              fill="#D0D5DD"
-            />
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M19 14.078a3.922 3.922 0 100 7.845 3.922 3.922 0 000-7.845zM15 18a4 4 0 118 0 4 4 0 01-8 0z"
-              fill="#D0D5DD"
-            />
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M19 15.32a2.68 2.68 0 100 5.36 2.68 2.68 0 000-5.36zM16.243 18a2.757 2.757 0 115.514 0 2.757 2.757 0 01-5.514 0z"
-              fill="#D0D5DD"
-            />
-            <path d="M18.961 2h.078v32h-.078V2z" fill="#D0D5DD" />
-            <path d="M35 17.96v.079H3v-.078h32z" fill="#D0D5DD" />
-            <path
-              d="M29.602 2h.078v32h-.078V2zM13.64 2h.078v32h-.077V2zM24.282 2h.077v32h-.077V2zM8.32 2h.078v32H8.32V2z"
-              fill="#D0D5DD"
-            />
-            <path
-              d="M35 28.602v.077H3v-.077h32zM35 12.64v.078H3v-.077h32zM35 23.281v.078H3v-.078h32zM35 7.32v.078H3V7.32h32z"
-              fill="#D0D5DD"
-            />
-            <g filter="url(#filter1_dd_6271_307)">
-              <circle
-                cx={19}
-                cy={18}
-                r={8}
-                fill="url(#paint1_linear_6271_307)"
-              />
-            </g>
-            <g filter="url(#filter2_b_6271_307)">
-              <path
-                d="M3 18h32v3.2c0 4.48 0 6.72-.872 8.432a8 8 0 01-3.496 3.496C28.92 34 26.68 34 22.2 34h-6.4c-4.48 0-6.72 0-8.432-.872a8 8 0 01-3.496-3.496C3 27.92 3 25.68 3 21.2V18z"
-                fill="#fff"
-                fillOpacity={0.2}
-              />
-            </g>
-          </g>
-          <rect
-            x={3.15}
-            y={2.15}
-            width={31.7}
-            height={31.7}
-            rx={7.85}
-            stroke="#D0D5DD"
-            strokeWidth={0.3}
+        <g
+          transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+          fill="#000000"
+          stroke="none"
+        >
+          <path
+            d="M4714 5096 c-61 -29 -63 -30 -202 -276 -151 -267 -142 -240 -98 -292
+45 -52 109 -182 127 -258 7 -30 13 -96 13 -147 0 -50 1 -91 2 -90 17 19 445
+793 454 821 14 45 7 102 -19 154 -24 47 -45 66 -101 91 -59 27 -114 26 -176
+-3z"
+          />
+          <path
+            d="M3820 4603 c-142 -27 -296 -159 -351 -301 -27 -71 -36 -203 -19 -281
+81 -363 531 -501 800 -245 90 86 130 163 150 290 37 229 -125 469 -355 529
+-55 14 -169 18 -225 8z"
+          />
+          <path
+            d="M2965 3814 c-22 -8 -665 -407 -1430 -887 -1344 -843 -1391 -874
+-1413 -917 -30 -58 -26 -125 10 -172 14 -18 204 -227 421 -465 342 -372 402
+-433 441 -448 53 -20 98 -15 147 18 30 20 2249 2738 2249 2755 0 8 -150 95
+-202 117 -47 19 -169 19 -223 -1z"
+          />
+          <path
+            d="M2398 2232 c-636 -781 -1143 -1398 -1164 -1411 -76 -52 -179 -73
+-254 -51 l-35 10 -180 -186 c-99 -103 -190 -204 -203 -225 -98 -162 46 -385
+238 -367 97 10 107 18 659 587 l524 539 247 381 c135 209 249 384 253 387 6 6
+147 -72 147 -82 0 -9 110 -699 115 -721 4 -18 -42 -61 -307 -281 -360 -298
+-364 -303 -390 -360 -61 -136 15 -296 159 -338 74 -22 148 -9 214 38 25 18
+212 171 416 341 392 326 414 348 428 443 4 25 -13 157 -49 379 l-55 340 115
+194 c63 106 113 195 111 197 -2 2 -59 8 -128 13 -139 10 -179 23 -240 78 -65
+59 -93 123 -94 214 0 73 4 85 104 337 58 144 107 260 109 257 2 -2 -13 -125
+-33 -273 -22 -160 -35 -284 -31 -304 11 -60 59 -123 112 -149 47 -22 65 -24
+409 -36 198 -8 410 -12 472 -11 106 3 113 5 155 33 67 48 89 95 86 181 -4 93
+-36 145 -111 179 -49 23 -71 25 -357 36 -168 6 -307 13 -309 15 -2 2 9 98 25
+213 15 116 30 209 31 207 2 -1 7 -65 11 -140 6 -102 12 -140 23 -147 8 -5 52
+-9 99 -9 l85 0 77 133 c104 178 112 198 111 282 0 81 -21 144 -65 198 -16 21
+-26 42 -22 47 5 4 41 28 79 54 l70 47 -75 -7 c-134 -11 -293 27 -398 97 -24
+16 -46 29 -50 29 -4 -1 -514 -625 -1134 -1388z"
           />
         </g>
-        <defs>
-          <filter
-            id="filter0_dd_6271_307"
-            x={0}
-            y={0}
-            width={38}
-            height={38}
-            filterUnits="userSpaceOnUse"
-            colorInterpolationFilters="sRGB"
-          >
-            <feFlood floodOpacity={0} result="BackgroundImageFix" />
-            <feColorMatrix
-              in="SourceAlpha"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
-            />
-            <feOffset dy={1} />
-            <feGaussianBlur stdDeviation={1} />
-            <feColorMatrix values="0 0 0 0 0.0627451 0 0 0 0 0.0941176 0 0 0 0 0.156863 0 0 0 0.06 0" />
-            <feBlend
-              in2="BackgroundImageFix"
-              result="effect1_dropShadow_6271_307"
-            />
-            <feColorMatrix
-              in="SourceAlpha"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
-            />
-            <feOffset dy={1} />
-            <feGaussianBlur stdDeviation={1.5} />
-            <feColorMatrix values="0 0 0 0 0.0627451 0 0 0 0 0.0941176 0 0 0 0 0.156863 0 0 0 0.1 0" />
-            <feBlend
-              in2="effect1_dropShadow_6271_307"
-              result="effect2_dropShadow_6271_307"
-            />
-            <feBlend
-              in="SourceGraphic"
-              in2="effect2_dropShadow_6271_307"
-              result="shape"
-            />
-          </filter>
-          <filter
-            id="filter1_dd_6271_307"
-            x={8}
-            y={8}
-            width={22}
-            height={22}
-            filterUnits="userSpaceOnUse"
-            colorInterpolationFilters="sRGB"
-          >
-            <feFlood floodOpacity={0} result="BackgroundImageFix" />
-            <feColorMatrix
-              in="SourceAlpha"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
-            />
-            <feOffset dy={1} />
-            <feGaussianBlur stdDeviation={1} />
-            <feColorMatrix values="0 0 0 0 0.0627451 0 0 0 0 0.0941176 0 0 0 0 0.156863 0 0 0 0.06 0" />
-            <feBlend
-              in2="BackgroundImageFix"
-              result="effect1_dropShadow_6271_307"
-            />
-            <feColorMatrix
-              in="SourceAlpha"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
-            />
-            <feOffset dy={1} />
-            <feGaussianBlur stdDeviation={1.5} />
-            <feColorMatrix values="0 0 0 0 0.0627451 0 0 0 0 0.0941176 0 0 0 0 0.156863 0 0 0 0.1 0" />
-            <feBlend
-              in2="effect1_dropShadow_6271_307"
-              result="effect2_dropShadow_6271_307"
-            />
-            <feBlend
-              in="SourceGraphic"
-              in2="effect2_dropShadow_6271_307"
-              result="shape"
-            />
-          </filter>
-          <filter
-            id="filter2_b_6271_307"
-            x={-2}
-            y={13}
-            width={42}
-            height={26}
-            filterUnits="userSpaceOnUse"
-            colorInterpolationFilters="sRGB"
-          >
-            <feFlood floodOpacity={0} result="BackgroundImageFix" />
-            <feGaussianBlur in="BackgroundImageFix" stdDeviation={2.5} />
-            <feComposite
-              in2="SourceAlpha"
-              operator="in"
-              result="effect1_backgroundBlur_6271_307"
-            />
-            <feBlend
-              in="SourceGraphic"
-              in2="effect1_backgroundBlur_6271_307"
-              result="shape"
-            />
-          </filter>
-          <linearGradient
-            id="paint0_linear_6271_307"
-            x1={19}
-            y1={2}
-            x2={19}
-            y2={34}
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="#fff" />
-            <stop offset={1} stopColor="#D0D5DD" />
-          </linearGradient>
-          <linearGradient
-            id="paint1_linear_6271_307"
-            x1={15}
-            y1={26}
-            x2={23}
-            y2={10}
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="#53389E" />
-            <stop offset={1} stopColor="#6941C6" />
-          </linearGradient>
-          <clipPath id="clip0_6271_307">
-            <rect x={3} y={2} width={32} height={32} rx={8} fill="#fff" />
-          </clipPath>
-        </defs>
       </svg>
       Jornada do Herói
     </strong>

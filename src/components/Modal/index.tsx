@@ -32,11 +32,25 @@ export function Modal({ choosenHeroes, closeModal }: ModalProps) {
   const handleModalClose = () => {
     closeModal()
   }
+
+  const handleKeyPress = (event: KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      closeModal()
+    }
+  }
+
   useEffect(() => {
     document.body.style.overflow = 'hidden'
 
     return () => {
       document.body.style.overflow = 'auto'
+    }
+  }, [])
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyPress)
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress)
     }
   }, [])
 
@@ -47,7 +61,7 @@ export function Modal({ choosenHeroes, closeModal }: ModalProps) {
         <HeroContainer winner={winner === choosenHeroes[0]}>
           {winner === choosenHeroes[0] && <Winner>Vencedor</Winner>}
           <Image
-            className="w-64 h-96 object-fill transition group-hover:scale-125 rounded-lg"
+            className="w-64 h-60 object-fill transition group-hover:scale-125 rounded-lg"
             src={choosenHeroes[0].images.lg}
             alt={`Imagem de ${choosenHeroes[0].name}`}
             height={500}
@@ -66,7 +80,7 @@ export function Modal({ choosenHeroes, closeModal }: ModalProps) {
         <HeroContainer winner={winner === choosenHeroes[1]}>
           {winner === choosenHeroes[1] && <Winner>Vencedor</Winner>}
           <Image
-            className="w-64 h-96 object-fill transition group-hover:scale-125 rounded-lg"
+            className="w-64 h-60 object-fill transition group-hover:scale-125 rounded-lg"
             src={choosenHeroes[1].images.sm}
             alt={`Imagem de ${choosenHeroes[0].name}`}
             height={500}
