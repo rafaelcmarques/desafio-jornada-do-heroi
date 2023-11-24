@@ -32,7 +32,7 @@ export function BasicPopover({ powerstats }: PopoverProps) {
   return (
     <div>
       <button
-        className="text-blue-400 hover:text-red-600 flex gap-2"
+        className="text-violet-500 hover:text-red-600 flex gap-2"
         onClick={handleClick}
       >
         Atributos de habilidade
