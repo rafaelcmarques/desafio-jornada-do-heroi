@@ -18,7 +18,7 @@ export default function Home() {
   async function fetchData() {
     try {
       const response = await axios.get(
-        '//homologacao3.azapfy.com.br/api/ps/metahumans',
+        'http://homologacao3.azapfy.com.br/api/ps/metahumans',
       )
       setAllData(response.data)
     } catch (error) {
