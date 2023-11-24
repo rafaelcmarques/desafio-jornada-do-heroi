@@ -1,25 +1,19 @@
-import axios from 'axios'
 import { useEffect, useState } from 'react'
+
+import axios from 'axios'
+import toast, { Toaster } from 'react-hot-toast'
+
 import { useSearch } from '../hooks/Search'
 import { Superhero } from '@/src/DTOs/superHero'
+
 import { Card } from '@/src/components/Card'
+import { Modal } from '../components/Modal'
 
 export default function Home() {
   const [allData, setAllData] = useState<Superhero[]>([])
   const [filteredData, setFilteredData] = useState<Superhero[]>([])
+  const [selectedHeros, setSelectedHeroes] = useState<Superhero[]>([])
   const { searchValue = '' } = useSearch()
-
-  const [selectedHeroes, setSelectedHeroes] = useState<number[]>([])
-
-  const handleSelect = (heroId: number, isSelected: boolean) => {
-    if (isSelected) {
-      // Adicionar herói à lista de heróis selecionados
-      setSelectedHeroes([...selectedHeroes, heroId])
-    } else {
-      // Remover herói da lista de heróis selecionados
-      setSelectedHeroes(selectedHeroes.filter((id) => id !== heroId))
-    }
-  }
 
   async function fetchData() {
     try {
@@ -34,10 +28,8 @@ export default function Home() {
 
   function filterData() {
     if (searchValue.trim() === '') {
-      // Se searchValue estiver vazio, mostrar todos os heróis
       setFilteredData(allData)
     } else {
-      // Filtrar heróis com base no searchValue
       const filteredHeros = allData.filter(
         (superHero) =>
           superHero.name.toLowerCase() === searchValue.toLowerCase(),
@@ -46,6 +38,32 @@ export default function Home() {
     }
   }
 
+  function handleSelection(data: Superhero) {
+    try {
+      if (selectedHeros.some((superHero) => superHero.id === data.id)) {
+        const removedHeroArray = selectedHeros.filter(
+          (superHero) => superHero.id !== data.id,
+        )
+        setSelectedHeroes(removedHeroArray)
+      } else {
+        if (selectedHeros.length >= 2) {
+          const message = 'Só é possível selecionar dois heróis'
+          toast.error(message)
+          throw new Error(message)
+        }
+
+        toast.success(`Herói ${data.name} selecionado.`)
+
+        setSelectedHeroes((prevSelectedHeroes) => [...prevSelectedHeroes, data])
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  function handleCloseModal() {
+    setSelectedHeroes([])
+  }
   useEffect(() => {
     fetchData()
   }, [])
@@ -56,6 +74,14 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-6">
+      <Toaster />
+      {selectedHeros.length === 2 && (
+        <Modal
+          choosenHeroes={selectedHeros}
+          closeModal={() => handleCloseModal()}
+        />
+      )}
+
       <h1 className="m-auto sm:text-2xl md:text-3xl lg:text-5xl xl:text-5xl font-bangers">
         Escolha seus Super-Heróis
       </h1>
@@ -64,7 +90,8 @@ export default function Home() {
           <Card
             superhero={superHero}
             key={superHero.id}
-            onSelect={handleSelect}
+            onSelect={() => handleSelection(superHero)}
+            isSelected={selectedHeros.some((hero) => hero.id === superHero.id)}
           />
         ))}
       </div>

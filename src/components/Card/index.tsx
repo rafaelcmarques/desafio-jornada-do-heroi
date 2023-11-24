@@ -1,19 +1,18 @@
-import { useState } from 'react'
 import Image from 'next/image'
-import { InfoIcon } from 'lucide-react'
 import { Superhero } from '@/src/DTOs/superHero'
+import { BasicPopover } from '../Popover'
 
 interface CardProps {
   superhero: Superhero
-  onSelect: (id: number) => void
+  onSelect: (isSelected: boolean) => void
   isSelected: boolean
 }
 
-export function Card({ superhero, onSelect, isSelected = false }: CardProps) {
-  const handleClick = () => {
-    onSelect(superhero.id)
-    isSelected = !isSelected
+export function Card({ superhero, onSelect, isSelected }: CardProps) {
+  function handleSelection() {
+    onSelect(!isSelected)
   }
+
   return (
     <div
       className={`
@@ -23,13 +22,13 @@ export function Card({ superhero, onSelect, isSelected = false }: CardProps) {
     transition
     ${isSelected ? 'border-4 border-blue-400' : ''} // Adicione esta linha
   `}
-      onClick={handleClick} // Adicione esta linha para lidar com o clique
+      onClick={handleSelection}
     >
       <figure className="max-h-64 aspect-square overflow-hidden">
         <Image
           className="w-full h-full object-cover transition group-hover:scale-125"
           src={superhero.images.lg}
-          alt={`Imagem de ${superhero.name}`} // Aqui, você fornece um texto significativo
+          alt={`Imagem de ${superhero.name}`}
           height={200}
           width={200}
         />
@@ -39,10 +38,7 @@ export function Card({ superhero, onSelect, isSelected = false }: CardProps) {
         <p className="font-serif">{superhero.biography.publisher}</p>
       </div>
       <footer className="flex gap-2 px-4">
-        <button className="text-blue-400 hover:text-red-600 flex gap-2">
-          Mais detalhes
-          <InfoIcon />
-        </button>
+        <BasicPopover powerstats={superhero.powerstats} />
       </footer>
     </div>
   )
