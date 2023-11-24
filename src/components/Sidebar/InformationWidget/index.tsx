@@ -6,8 +6,8 @@ export function Information() {
           Como funciona?
         </span>
         <p className="text-violet-500 text-sm/5">
-          Escolha dois Hérois. Vence aquele que tiver a soma dos atributos
-          maior.
+          Escolha dois Hérois. Vence aquele que com a maior somatoria dos
+          atributos de habilidade.
         </p>
       </div>
     </div>

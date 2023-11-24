@@ -54,7 +54,8 @@ export const HeroInfos = styled.div`
   background-color: white;
   width: 256px;
   height: 230px;
-  border-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 `
 
 export const Title = styled.h1`
