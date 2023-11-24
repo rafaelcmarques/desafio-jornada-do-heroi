@@ -66,7 +66,7 @@ export function Modal({ choosenHeroes, closeModal }: ModalProps) {
         <HeroContainer winner={winner === choosenHeroes[1]}>
           {winner === choosenHeroes[1] && <Winner>Vencedor</Winner>}
           <Image
-            className="w-64 h-96 object-contain transition group-hover:scale-125 rounded-lg"
+            className="w-64 h-96 object-fill transition group-hover:scale-125 rounded-lg"
             src={choosenHeroes[1].images.sm}
             alt={`Imagem de ${choosenHeroes[0].name}`}
             height={500}

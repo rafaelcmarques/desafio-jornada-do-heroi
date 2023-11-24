@@ -32,6 +32,7 @@ export const Overlay = styled.div`
 export const HeroContainer = styled.div<ContainerProps>`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 15px;
   position: relative;
@@ -58,6 +59,7 @@ export const Title = styled.h1`
 export const Winner = styled.h1`
   font-size: 32px;
   font-weight: bold;
-
+  position: absolute;
+  top: -40px;
   color: gold;
 `
